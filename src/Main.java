@@ -10,7 +10,7 @@ public class Main {
     panel.setLayout(new BorderLayout());
     JPanel subPanelImages = new JPanel();
 
-    JLabel label = new JLabel("Pick Level");
+    JLabel label = new JLabel("Pick a Level");
 
     JLabel img = new JLabel();
     img.setIcon(new ImageIcon("images/Flags/US.png"));
