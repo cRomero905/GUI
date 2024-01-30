@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java. awt.event.*;
 
 public class Main {
   public static void main(String[] args) {
@@ -17,9 +18,33 @@ public class Main {
     JPanel imgPanel = new JPanel();
 
     JButton button1 = new JButton("Easy");
+    button1.addActionListener(new ActionListener(){
+      @Override
+      public void actionPerformed(ActionEvent e){
+        label.setText("Selected Level: Easy");
+      }
+    });
     JButton button2 = new JButton("Medium");
+    button2.addActionListener(new ActionListener(){
+      @Override
+      public void actionPerformed(ActionEvent e){
+        label.setText("Selected Level: Medium");
+      }
+    });
     JButton button3 = new JButton("Hard");
+    button3.addActionListener(new ActionListener(){
+      @Override
+      public void actionPerformed(ActionEvent e){
+        label.setText("Selected Level: Hard");
+      }
+    });
     JTextField textField = new JTextField("Enter a guess", 10);
+    textField.addActionListener(new ActionListener(){
+      @Override
+        public void actionPerformed(ActionEvent e){
+          textField.setText("");
+        }
+    });
 
     panel.add(label, BorderLayout.NORTH);
     subPanelImages.add(button1);
